@@ -23,15 +23,9 @@ agent any
     
    }
   }
-  /*
-  stage('Linting'){
-   steps{
-    sh """
-    cd node
-    eslint .
-    """
-   }
-  }
+   
+  
+  
    stage('SonarQube'){
     environment {
         scannerHome = tool 'SonarQubeScanner'
@@ -47,4 +41,4 @@ agent any
   }
       
  }
-}
+
