@@ -1,9 +1,5 @@
 pipeline { 
 agent any
-//tools {nodejs "node"}
-//environment{
-  //EXECUTE = true
- //}
 
  stages {
     
@@ -23,9 +19,9 @@ agent any
     
    }
   }
-   
   
   
+ 
    stage('SonarQube'){
     environment {
         scannerHome = tool 'SonarQubeScanner'
@@ -34,9 +30,7 @@ agent any
     withSonarQubeEnv('SonarQube') {
             sh "${scannerHome}/bin/sonar-scanner"
         }
-        timeout(time: 10, unit: 'MINUTES') {
-           waitForQualityGate abortPipeline: true
-        }
+        
    }
   }
       
