@@ -14,10 +14,10 @@ describe('cidrToMaskFunction()', function () {
 
  it('should return an invalid', function () {
       expect("Invalid").to.be.equal("Invalid");
-      expect("Invalid").to.be.equal(cidrToMaskFunction("0"));
-      expect("Invalid").to.be.equal(cidrToMaskFunction("33"));
-      expect("Invalid").to.be.equal(cidrToMaskFunction("a"));
-      expect("Invalid").to.be.equal(cidrToMaskFunction(""));
+      expect("0").to.be.equal(cidrToMaskFunction("Invalid"));
+      expect("33").to.be.equal(cidrToMaskFunction("Invalid"));
+      expect("a").to.be.equal(cidrToMaskFunction("Invalid"));
+      expect("").to.be.equal(cidrToMaskFunction("Invalid"));
     });
 
 });
