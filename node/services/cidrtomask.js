@@ -11,16 +11,4 @@ export const cidrToMaskFunction = (value) => {
       	else {
 return "Invalid"
 		}
-				}
-    function createNetmaskAddr(bitCount) {
-       var mask=[];
-       var i;
-       for(let i=0;i<4;i++){
-        var n=Math.min(bitCount,8);
-        mask.push(256-Math.pow(2,8-n));
-        bitCount -= n;
-            }
-        return mask.join('.');
-               	        				                                        
-          } 
 }
