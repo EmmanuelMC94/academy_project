@@ -14,15 +14,15 @@ agent any
   stage('unit test'){
    steps{
     sh 'cd node'
-    //sh 'npm test'
-    sh 'echo "Running Unit Test"'
+    sh 'npm test || true'
+    sh 'echo "Unit Test Finish"'
     
    }
   }
   
   
  
-   stage('SonarQube'){
+   stage('SaticAnalysis'){
     environment {
         scannerHome = tool 'SonarQubeScanner'
     }
